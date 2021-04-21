@@ -79,6 +79,7 @@ navLinks.addEventListener("click", function (e) {
   //Matching strategy: only the elements we r interested in
   if (e.target.classList.contains("nav__link")) {
     const id = e.target.getAttribute("href");
+    if (id === "#") return; // Guard Clause
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   }
 });
